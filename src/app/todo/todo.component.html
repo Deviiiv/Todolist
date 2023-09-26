@@ -1,0 +1,33 @@
+<div>
+    <form (submit)="addtodo()">
+        <input
+            type="text"
+            name="inputvalue"
+            placeholder="Enter Todo..."
+            [(ngModel)]="inputvalue"
+            class="entertodo"
+        /><br/>
+        <input
+            type="submit"
+            value="Add Todo"
+            class="addtodo"
+        />
+    </form>
+
+    <div *ngFor="let todoname of todoList">
+        <h1>{{todoname}}</h1>
+        <div *ngIf="show === todoname">
+            <input type="text" #inputValue [value]="todoname" (change)="updatedEditValue(inputValue.value)">
+            <button (click)="updateValue(todoname)">Update</button>
+        </div>
+        <button (click)="edittodo(todoname)">edittodo</button>
+        <button (click)="removetodo(todoname)">Remove</button>
+        
+    </div>
+</div>
+<!-- 
+<div *ngFor="let todoname of todoList">
+    <h1>{{todoname}}</h1>
+    <button (click)="removetodo(todoname)" class="removetodo">Remove</button>
+</div> -->
+

@@ -1,0 +1,21 @@
+.entertodo{
+    width: 25%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: large;
+}
+.addtodo{
+    background-color: green;
+    color: wheat;
+    font-size: large;
+    padding: 5px;
+    width: 10%;
+    border-radius: 5px;
+    margin:8px 8px 20px 8px;
+
+
+
+
+
+
+}
